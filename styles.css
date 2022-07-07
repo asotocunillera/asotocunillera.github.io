@@ -438,4 +438,57 @@ body.dark .qualification__list .rows .row .elements__duration {
   text-align: center;
 }
 
+.contact {
+  text-align: center;
+}
+.contact__body {
+  display: flex;
+  flex-direction: column;
+}
+.contact__body__info {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+.contact__body__info .info-contact {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+}
+.contact__body__info .info-contact p {
+  padding-left: 1rem;
+  text-align: left;
+}
+.contact__body__form {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+.contact__body__form form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+.contact__body__form form input, .contact__body__form form textarea {
+  margin: 1rem 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(169.22deg, #FF8552, #F25F60);
+}
+.contact__body__form form label {
+  text-align: left;
+}
+.contact__body__form form input {
+  height: 40px;
+}
+.contact__body__form form .contact-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  width: 50px;
+}
+
 /*# sourceMappingURL=styles.css.map */
