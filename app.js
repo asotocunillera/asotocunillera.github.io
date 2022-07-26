@@ -9,12 +9,23 @@ const skillCharts = document.querySelectorAll("#skillCharts .chart");
 
 const qualificationFilters = document.querySelector("#qualificationFilters");
 
+let checkTheme = () =>{
+  const localStorageTheme = localStorage.getItem("theme");
+  if (localStorageTheme !== null && localStorageTheme === "dark"){
+    document.body.classList.add("dark");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", checkTheme);
+
 navHamburger.addEventListener("click", ()=>{
   nav.classList.toggle('open');
 })
 
 themeFilter.addEventListener("click", ()=>{
   document.body.classList.toggle("dark");
+  let theme = document.body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", theme);
 })
 
 // TODO: refactor this event
