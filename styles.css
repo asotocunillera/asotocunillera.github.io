@@ -491,4 +491,16 @@ body.dark .qualification__list .rows .row .elements__duration {
   width: 50px;
 }
 
+.footer {
+  background: linear-gradient(169.22deg, #FF8552, #F25F60);
+  margin-top: 2rem;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__links a + a {
+  margin-left: 0.9rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
