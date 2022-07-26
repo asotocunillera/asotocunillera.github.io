@@ -54,6 +54,11 @@ h2 {
   margin-bottom: 2rem;
   font-size: 1.625rem;
 }
+@media (min-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 
 p {
   margin: 0;
@@ -101,7 +106,7 @@ button:hover, .button:hover {
 }
 .button-primary:hover, .button-primary:focus {
   color: #714FD7;
-  background-color: #1F0322;
+  background: #1F0322;
 }
 
 .container {
@@ -178,18 +183,24 @@ body.dark .navbar__theme-icon {
 .navbar__hamburger span:last-child {
   width: 10px;
 }
-.navbar__hamburger.open > span:first-child {
+nav.open .navbar__hamburger > span:first-child {
   transform: translateY(7px) rotate(45deg);
   transform-origin: initial;
 }
-.navbar__hamburger.open > span:nth-child(2) {
+nav.open .navbar__hamburger > span:nth-child(2) {
   transform: translateX(1rem);
   opacity: 0;
 }
-.navbar__hamburger.open > span:last-child {
+nav.open .navbar__hamburger > span:last-child {
   width: 20px;
   transform: translateY(-7px) rotate(-45deg);
   transform-origin: initial;
+}
+nav:not(.open) .navbar__hamburger:hover > span:first-child {
+  width: 10px;
+}
+nav:not(.open) .navbar__hamburger:hover > span:last-child {
+  width: 20px;
 }
 
 .navbar-menu {
@@ -231,6 +242,11 @@ nav.open .navbar-menu {
 .hero__img img {
   height: 230px;
 }
+@media (min-width: 600px) {
+  .hero__img img {
+    height: 400px;
+  }
+}
 .hero__title .name {
   font-size: 0.75rem;
   font-weight: 700;
@@ -240,12 +256,25 @@ nav.open .navbar-menu {
 .hero__title .occupation:first-of-type {
   margin-bottom: 0.5rem;
 }
+@media (min-width: 600px) {
+  .hero__title .occupation {
+    font-size: 3.125rem;
+  }
+}
 .hero__cta {
   padding-top: 2rem;
 }
 
 .about-me {
   text-align: center;
+}
+.about-me__img img {
+  height: 230px;
+}
+@media (min-width: 600px) {
+  .about-me__img img {
+    height: 400px;
+  }
 }
 .about-me__body {
   display: flex;
@@ -263,7 +292,7 @@ body.dark .about-me__body h3.text-info {
 .about-me__body h3.text-info span {
   color: #F25F60;
 }
-.about-me__body a, .about-me__body p {
+.about-me__body p, .about-me__body h3 + a {
   margin-bottom: 2rem;
 }
 
@@ -295,6 +324,11 @@ body.dark .about-me__body h3.text-info {
   font-family: Bogart, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
 }
+@media (min-width: 600px) {
+  .skills__charts .chart__label {
+    flex: 1;
+  }
+}
 .skills__charts .chart__bac {
   flex: 4;
   width: 100%;
@@ -317,6 +351,13 @@ body.dark .skills__charts .chart__bac {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .skills__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .skills__cards .card {
   text-align: center;
@@ -396,6 +437,11 @@ body.dark .qualification__filters__filter.active .icon {
   width: 50%;
   padding: 0.7rem;
 }
+@media (min-width: 600px) {
+  .qualification__list .rows .row .elements.even {
+    padding-left: 5rem;
+  }
+}
 .qualification__list .rows .row .elements.odd {
   position: relative;
   border-right: 2px #714FD7 solid;
@@ -411,6 +457,11 @@ body.dark .qualification__filters__filter.active .icon {
   height: 30px;
   border-radius: 50%;
   background-color: #714FD7;
+}
+@media (min-width: 600px) {
+  .qualification__list .rows .row .elements.odd {
+    padding-right: 5rem;
+  }
 }
 .qualification__list .rows .row .elements__title {
   font-family: Bogart, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -444,6 +495,11 @@ body.dark .qualification__list .rows .row .elements__duration {
 .contact__body {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 920px) {
+  .contact__body {
+    flex-direction: row;
+  }
 }
 .contact__body__info {
   display: flex;
@@ -501,6 +557,11 @@ body.dark .qualification__list .rows .row .elements__duration {
 }
 .footer__links a + a {
   margin-left: 0.9rem;
+}
+@media (min-width: 600px) {
+  .footer__links a + a {
+    margin-left: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
