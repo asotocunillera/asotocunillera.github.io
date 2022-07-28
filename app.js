@@ -6,6 +6,9 @@ const navHamburger = document.querySelector("#navHamburger");
 const navbarMenu = document.querySelector("#navbarMenu");
 const themeFilter = document.querySelector("#themeFilter");
 
+const projectsButton = document.querySelector("#projectsButton");
+const projectSection = document.querySelector("#projectSection");
+
 const skillFilter = document.querySelector("#skillFilter");
 const skillCharts = document.querySelectorAll("#skillCharts .chart");
 
@@ -50,7 +53,7 @@ navbarMenu.addEventListener("click", (e) => {
   }
 })
 
-
+projectsButton.addEventListener("click", (() => scrollToTarget(projectSection, 65)))
 
 skillFilter.addEventListener("click", (e) => {
   let selectedFilter = e.target.dataset.skills
