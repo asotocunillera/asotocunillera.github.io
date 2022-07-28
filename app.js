@@ -50,6 +50,8 @@ navbarMenu.addEventListener("click", (e) => {
   }
 })
 
+
+
 skillFilter.addEventListener("click", (e) => {
   let selectedFilter = e.target.dataset.skills
   if (selectedFilter) {
