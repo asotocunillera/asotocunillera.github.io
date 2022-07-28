@@ -31,6 +31,25 @@ themeFilter.addEventListener("click", () => {
   localStorage.setItem("theme", theme);
 })
 
+let scrollToTarget = (el, headerOffset) => {
+  let elementPosition = el.offsetTop;
+  let offsetPosition = elementPosition - headerOffset;
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+}
+
+navbarMenu.addEventListener("click", (e) => {
+  nav.classList.remove('open');
+  body.style.overflow = "auto";
+  if (e.target.nodeName === "H2") {
+    let idSection = e.target.dataset.href;
+    let section = document.querySelector(`#${idSection}`);
+    scrollToTarget(section, 65);
+  }
+})
+
 skillFilter.addEventListener("click", (e) => {
   let selectedFilter = e.target.dataset.skills
   if (selectedFilter) {
